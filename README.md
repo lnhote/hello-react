@@ -17,3 +17,7 @@ npm start
 npm run clean
 npm run build
 ```
+
+### contact me
+Author name: Hunter Lin
+Please send email to `lnhote@gmail.com` if you have any question. Thank you for using.
