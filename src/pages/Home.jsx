@@ -10,11 +10,9 @@ class Home extends React.Component {
 
   constructor () {
     super()
-
     this.state = {
       msg: 'hello user '
     }
-
     this.addData = this.addData.bind(this)
   }
 
@@ -28,7 +26,7 @@ class Home extends React.Component {
         <Head name={this.props.name} />
         <Nav active_page='home' />
         <Row type='flex' justify='center' align='top' style={{margin: '24px'}}>
-          请输入：<input type='text' onChange={(e) => { this.addData(e) }} />
+          Please enter your name：<input type='text' onChange={(e) => { this.addData(e) }} />
         </Row>
         <Content msg={this.state.msg} />
         <Footer />
@@ -36,8 +34,9 @@ class Home extends React.Component {
     )
   }
 }
+
 Home.propTypes = {
-  name: React.PropTypes.string
+  name: React.PropTypes.string.isRequired
 }
 
 Home.defaultProps = {

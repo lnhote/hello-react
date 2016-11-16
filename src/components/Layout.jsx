@@ -1,7 +1,8 @@
 import React from 'react'
 import {Col, Row} from 'antd'
 
-export default class Layout extends React.Component {
+class Layout extends React.Component {
+
   render () {
     return (
       <div className='normal'>
@@ -14,3 +15,9 @@ export default class Layout extends React.Component {
     )
   }
 }
+
+Layout.propTypes = {
+  children: React.PropTypes.node
+}
+
+export default Layout

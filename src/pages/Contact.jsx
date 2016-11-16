@@ -1,12 +1,11 @@
 import React from 'react'
-import {Row} from 'antd'
 import Layout from 'components/Layout'
 import Head from 'components/Head'
 import Nav from 'components/Nav'
 import Content from 'components/Content'
 import Footer from 'components/Footer'
 
-class Contact extends React.Component {
+export default class Contact extends React.Component {
 
   constructor () {
     super()
@@ -23,5 +22,3 @@ class Contact extends React.Component {
     )
   }
 }
-
-export default Contact

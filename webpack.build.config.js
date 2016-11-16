@@ -1,11 +1,10 @@
 const CWD = process.cwd()
 var path = require('path')
 var webpack = require('webpack')
-
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var config = {
+module.exports = {
   entry: {
     'main': [
       path.resolve(CWD, 'src', 'pages')
@@ -94,11 +93,9 @@ var config = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      	compress: {
-          	warnings: false
-      	}
+      compress: {
+        warnings: false
+      }
     })
   ]
 }
-
-module.exports = config

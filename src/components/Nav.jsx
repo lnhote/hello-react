@@ -1,8 +1,9 @@
 import React from 'react'
-import { Menu, Icon} from 'antd'
+import { Menu, Icon } from 'antd'
 import { Link } from 'react-router'
 
 const Nav = React.createClass({
+
   getInitialState () {
     return {
       current: this.props.active_page
@@ -14,6 +15,7 @@ const Nav = React.createClass({
       current: e.key
     })
   },
+
   render () {
     return (
       <Menu mode='horizontal'
@@ -36,4 +38,9 @@ const Nav = React.createClass({
     )
   }
 })
+
+Nav.propTypes = {
+  active_page: React.PropTypes.string.isRequired
+}
+
 export default Nav

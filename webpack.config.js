@@ -4,7 +4,7 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var config = {
+module.exports = {
   debug: true,
 
   devtool: 'eval-source-map',
@@ -27,8 +27,8 @@ var config = {
     inline: true,
     hot: true,
     port: 8081,
-    colors: true, // 终端中输出结果为彩色
-    historyApiFallback: true, // 不跳转
+    colors: true,
+    historyApiFallback: true,
     contentBase: path.resolve(CWD, 'devServer')
   },
 
@@ -108,5 +108,3 @@ var config = {
     })
   ]
 }
-
-module.exports = config

@@ -1,11 +1,9 @@
 import React from 'react'
 
-class Header extends React.Component {
-  constructor (props) {
-    super(props)
-  }
+class Head extends React.Component {
+
   render () {
-    var myStyle = {
+    var header_style = {
       fontSize: 20,
       fontWeight: 'bold',
       color: '#FF0000',
@@ -13,10 +11,13 @@ class Header extends React.Component {
     }
 
     return (
-      <div>
-        <h1 style={myStyle}>Welcome, {this.props.name}</h1>
-      </div>
-        )
+      <h1 style={header_style}>Welcome, {this.props.name}</h1>
+    )
   }
 }
-export default Header
+
+Head.propTypes = {
+  name: React.PropTypes.string.isRequired
+}
+
+export default Head

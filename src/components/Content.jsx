@@ -1,10 +1,8 @@
 import React from 'react'
-import {Card, Col, Row} from 'antd'
+import { Card } from 'antd'
 
 class Content extends React.Component {
-  constructor (props) {
-    super(props)
-  }
+
   render () {
     return (
       <Card title='antd'>
@@ -14,4 +12,9 @@ class Content extends React.Component {
     )
   }
 }
+
+Content.propTypes = {
+  msg: React.PropTypes.string.isRequired
+}
+
 export default Content
