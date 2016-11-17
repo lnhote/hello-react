@@ -82,6 +82,11 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react'
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new HtmlWebpackPlugin({
       chunks: ['main', 'vendor'],
       filename: 'index.html',

@@ -17,6 +17,10 @@ npm start
 npm run clean
 npm run build
 ```
+which equals to:
+```
+npm run rebuild
+```
 
 ### contact me
 Author name: Hunter Lin
