@@ -25,4 +25,4 @@ npm run rebuild
 ### contact me
 Author name: Hunter Lin
 
-Please send email to `lnhote@gmail.com` if you have any question. Thank you for using.
+Please send email to lnhote@gmail.com if you have any question. Thank you for using.
