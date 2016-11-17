@@ -96,6 +96,7 @@ module.exports = {
       template: path.resolve(CWD, 'src/assets/template.html'),
       favicon: ''
     }),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
