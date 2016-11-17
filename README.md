@@ -1,5 +1,10 @@
 ## A react demo
-use react, webpack, antd
+The demo includes 4 pages(home, about, contact, news)
+
+1. Uses react for components and pages
+2. Uses router for different urls
+3. uses ant design for some elements.
+4. Uses webpack for development and production
 
 ### install
 ```
