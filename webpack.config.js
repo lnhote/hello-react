@@ -46,12 +46,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css!autoprefixer',
+        loader: 'style!css!postcss',
         include: [path.resolve(CWD, 'less')]
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css!autoprefixer!less?sourceMap' +
+        loader: ExtractTextPlugin.extract('style-loader', 'css!postcss!less?sourceMap' +
           '&includePaths[]=' + path.resolve(CWD, 'node_modules') +
           '&includePaths[]=' + path.resolve(CWD, 'src')),
         include: [path.resolve(CWD, 'src/less')]
@@ -59,11 +59,15 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: [path.resolve(CWD, 'src/less')],
-        loader: 'style!css!autoprefixer!less?sourceMap' +
+        loader: 'style!css!postcss!less?sourceMap' +
           '&includePaths[]=' + path.resolve(CWD, 'node_modules') +
           '&includePaths[]=' + path.resolve(CWD, 'src')
       }
     ]
+  },
+
+  postcss: function () {
+    return [require('autoprefixer')]
   },
 
   resolveLoader: {
